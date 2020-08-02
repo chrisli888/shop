@@ -13,12 +13,6 @@ import javax.annotation.Resource;
 @SpringBootApplication
 public class ShopApplication {
 
-/*    @Resource
-    private NettyServer nettyServer;*/
-
-//    @Resource
-//    private HttpRouter httpRouter;
-
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(ShopApplication.class, args);
         HttpRouter httpRouter = context.getBean(HttpRouter.class);
@@ -27,11 +21,4 @@ public class ShopApplication {
         NettyServer nettyServer = context.getBean(NettyServer.class);
         nettyServer.start();
     }
-/*    @Override
-    public void run(String... args) throws Exception {
-
-
-        nettyServer.start();
-    }*/
-
 }
